@@ -9,14 +9,14 @@ def solve(arr):
     for i in range(1, len(arr)):
         if arr[i] == 0:
             z_count += 1
-            while z_count == 2:
-                if arr[left] == 0:
-                    z_count -= 1
-                left += 1
-            cur = i - left + 1
-            if cur > ans:
-                cur = ans
-                ind = i
+        while z_count == 2:
+            if arr[left] == 0:
+                z_count -= 1
+            left += 1
+        cur = i - left + 1
+        if cur > ans:
+            cur = ans
+            ind = i
     return ind
             
 
